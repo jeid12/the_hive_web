@@ -54,7 +54,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-slide-up animate-delay-300 px-4">
           <Button 
-            href="https://github.com/IshKevin/the_hive" 
+            href="https://thehivegame.netlify.app/" 
             external 
             size="lg"
             className="group w-full sm:w-auto"

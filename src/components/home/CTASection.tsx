@@ -38,7 +38,7 @@ export default function CTASection() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <Button 
-            href="https://github.com/IshKevin/the_hive" 
+            href="https://thehivegame.netlify.app/" 
             external 
             size="lg"
             className="animate-pulse-honey w-full sm:w-auto"
