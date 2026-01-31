@@ -24,20 +24,20 @@ const techStack = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-14 sm:pt-16 md:pt-20">
       {/* Hero Section */}
       <Section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-honey/5 rounded-full blur-3xl" />
+          <div className="hidden sm:block absolute top-20 left-10 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-full blur-3xl" />
+          <div className="hidden sm:block absolute bottom-20 right-10 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-accent-honey/5 rounded-full blur-3xl" />
         </div>
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <span className="text-6xl mb-6 block">🐝</span>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <span className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 block">🐝</span>
+          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6">
             About <span className="text-gradient">The Hive</span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl">
             An indie game adventure built with passion, creativity, 
             and a love for immersive gaming experiences.
           </p>
@@ -46,13 +46,13 @@ export default function AboutPage() {
 
       {/* Story Section */}
       <Section dark>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           <div>
             <SectionHeader 
               title="The Story Behind the Game" 
               centered={false}
             />
-            <div className="space-y-6 text-gray-300">
+            <div className="space-y-4 sm:space-y-6 text-gray-300 text-sm sm:text-base">
               <p className="leading-relaxed">
                 <strong className="text-white">The Hive</strong> was born from a passion for 
                 creating engaging, memorable gaming experiences. The game combines exploration, 
@@ -71,11 +71,11 @@ export default function AboutPage() {
           </div>
           
           <div className="relative">
-            <Card className="p-8">
-              <h3 className="font-heading text-2xl font-semibold text-white mb-6">
+            <Card className="p-4 sm:p-6 md:p-8">
+              <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-semibold text-white mb-4 sm:mb-6">
                 Design Philosophy
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3 sm:space-y-4">
                 {[
                   { title: 'Player-First Design', desc: 'Every decision serves the player experience' },
                   { title: 'Accessible Gameplay', desc: 'Easy to learn, rewarding to master' },

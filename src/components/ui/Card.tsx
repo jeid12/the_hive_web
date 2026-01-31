@@ -12,7 +12,7 @@ export default function Card({
   return (
     <div
       className={`
-        bg-background-light border border-white/10 rounded-xl p-6
+        bg-background-light border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6
         ${hover ? 'card-hover hover:border-primary/30' : ''}
         ${className}
       `}

@@ -29,9 +29,9 @@ export default function Button({
   }
   
   const sizeStyles = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm',
+    md: 'px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base',
+    lg: 'px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg',
   }
 
   const combinedStyles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`

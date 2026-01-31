@@ -7,6 +7,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'xs': '375px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         // Primary honey/amber palette - inspired by The Hive theme
@@ -33,13 +41,22 @@ const config: Config = {
         success: '#22c55e',
       },
       fontFamily: {
-        heading: ['var(--font-heading)', 'Georgia', 'serif'],
+        heading: ['var(--font-heading)', 'Nature Beauty', 'cursive', 'sans-serif'],
         body: ['var(--font-body)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'hero-pattern': 'linear-gradient(135deg, #0a0a0f 0%, #1a0f08 50%, #0a0a0f 100%)',
         'honey-gradient': 'linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%)',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '112': '28rem',
+        '128': '32rem',
+      },
+      fontSize: {
+        '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',

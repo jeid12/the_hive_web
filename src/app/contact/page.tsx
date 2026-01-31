@@ -100,16 +100,16 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-honey/5 rounded-full blur-3xl" />
+          <div className="hidden sm:block absolute top-20 left-10 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-full blur-3xl" />
+          <div className="hidden sm:block absolute bottom-20 right-10 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-accent-honey/5 rounded-full blur-3xl" />
         </div>
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <span className="text-6xl mb-6 block">📬</span>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <span className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 block">📬</span>
+          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6">
             Get in <span className="text-gradient">Touch</span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl">
             Questions, feedback, or just want to say hello? We&apos;d love to hear from you.
           </p>
         </div>
@@ -117,20 +117,20 @@ export default function ContactPage() {
 
       {/* Contact Links Section */}
       <Section dark>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {contactLinks.map((item, index) => (
-            <Card key={index} className="p-8 text-center">
-              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${item.disabled ? 'bg-gray-800 text-gray-500' : 'bg-primary/10 text-primary'}`}>
+            <Card key={index} className="p-4 sm:p-6 md:p-8 text-center">
+              <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full mb-4 sm:mb-6 ${item.disabled ? 'bg-gray-800 text-gray-500' : 'bg-primary/10 text-primary'}`}>
                 {item.icon}
               </div>
-              <h3 className="font-heading text-xl font-semibold text-white mb-3">
+              <h3 className="font-heading text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
                 {item.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-6">
+              <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
                 {item.description}
               </p>
               {item.disabled ? (
-                <span className="inline-flex items-center justify-center gap-2 text-gray-500 font-medium">
+                <span className="inline-flex items-center justify-center gap-2 text-gray-500 font-medium text-sm">
                   {item.linkText}
                 </span>
               ) : (
@@ -138,11 +138,11 @@ export default function ContactPage() {
                   href={item.link}
                   target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noopener noreferrer' : undefined}
-                  className="inline-flex items-center justify-center gap-2 text-primary hover:text-primary-light font-medium transition-colors"
+                  className="inline-flex items-center justify-center gap-2 text-primary hover:text-primary-light font-medium transition-colors text-sm sm:text-base"
                 >
                   {item.linkText}
                   {item.external && (
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   )}
@@ -155,7 +155,7 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <Section>
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           <div>
             <SectionHeader 
               title="Send a Message"
@@ -164,17 +164,17 @@ export default function ContactPage() {
             />
             
             {submitted ? (
-              <Card className="p-8 text-center">
-                <span className="text-5xl block mb-4">✅</span>
-                <h3 className="font-heading text-xl font-semibold text-white mb-2">
+              <Card className="p-6 sm:p-8 text-center">
+                <span className="text-4xl sm:text-5xl block mb-3 sm:mb-4">✅</span>
+                <h3 className="font-heading text-lg sm:text-xl font-semibold text-white mb-2">
                   Message Sent!
                 </h3>
-                <p className="text-gray-400 mb-6">
+                <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
                   Thank you for reaching out. We&apos;ll get back to you soon.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="text-primary hover:text-primary-light transition-colors"
+                  className="text-primary hover:text-primary-light transition-colors text-sm sm:text-base"
                 >
                   Send another message
                 </button>

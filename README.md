@@ -164,7 +164,8 @@ This project is created for educational purposes.
 
 ## 🙏 Credits
 
-- **Game**: [The Hive](https://github.com/IshKevin/the_hive) by Kevin Ishimwe
+- **Game**: [The Hive](https://github.com/IshKevin/the_hive) by The hive group
+
 - **Framework**: Phaser 3
 - **Website**: Built with Next.js and Tailwind CSS
 

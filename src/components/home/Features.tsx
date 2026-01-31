@@ -41,7 +41,7 @@ export default function Features() {
         subtitle="Discover what makes The Hive a unique gaming experience"
       />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
         {features.map((feature, index) => (
           <div 
             key={index}

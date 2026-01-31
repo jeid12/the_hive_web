@@ -93,20 +93,20 @@ const gameFlow = [
 
 export default function GameplayPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-14 sm:pt-16 md:pt-20">
       {/* Hero Section */}
       <Section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-amber/5 rounded-full blur-3xl" />
+          <div className="hidden sm:block absolute top-20 left-10 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-full blur-3xl" />
+          <div className="hidden sm:block absolute bottom-20 right-10 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-accent-amber/5 rounded-full blur-3xl" />
         </div>
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <span className="text-6xl mb-6 block">🎮</span>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <span className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 block">🎮</span>
+          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6">
             How to <span className="text-gradient">Play</span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl">
             Master the controls and mechanics to conquer The Hive
           </p>
         </div>
@@ -120,18 +120,18 @@ export default function GameplayPage() {
         />
         
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {controls.map((control, index) => (
-              <Card key={index} className="text-center p-6">
-                <div className="text-3xl mb-3">{control.key}</div>
-                <div className="text-white font-medium mb-1">{control.label}</div>
-                <div className="text-gray-400 text-sm">{control.action}</div>
+              <Card key={index} className="text-center p-3 sm:p-4 md:p-6">
+                <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{control.key}</div>
+                <div className="text-white font-medium mb-1 text-sm sm:text-base">{control.label}</div>
+                <div className="text-gray-400 text-xs sm:text-sm">{control.action}</div>
               </Card>
             ))}
           </div>
           
-          <div className="mt-8 text-center">
-            <p className="text-gray-400">
+          <div className="mt-6 sm:mt-8 text-center">
+            <p className="text-gray-400 text-sm sm:text-base px-4">
               <span className="text-primary">💡 Tip:</span> The game uses top-down movement. 
               Move in all four directions to navigate through the environments.
             </p>
@@ -146,23 +146,23 @@ export default function GameplayPage() {
           subtitle="Understanding the gameplay systems"
         />
         
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12">
           {mechanics.map((mechanic, index) => (
-            <div key={index} className="grid lg:grid-cols-2 gap-8 items-center">
+            <div key={index} className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-4xl">{mechanic.icon}</span>
-                  <h3 className="font-heading text-2xl font-semibold text-white">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <span className="text-3xl sm:text-4xl">{mechanic.icon}</span>
+                  <h3 className="font-heading text-xl sm:text-2xl font-semibold text-white">
                     {mechanic.title}
                   </h3>
                 </div>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {mechanic.description}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
                   {mechanic.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-400">
-                      <span className="text-primary mt-1">✦</span>
+                    <li key={i} className="flex items-start gap-2 sm:gap-3 text-gray-400 text-sm sm:text-base">
+                      <span className="text-primary mt-0.5 sm:mt-1">✦</span>
                       <span>{detail}</span>
                     </li>
                   ))}

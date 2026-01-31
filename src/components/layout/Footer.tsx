@@ -21,13 +21,13 @@ export default function Footer() {
 
   return (
     <footer className="bg-background-light border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand */}
-          <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-3xl" aria-hidden="true">🐝</span>
-              <span className="font-heading text-xl font-semibold text-primary">
+          <div className="col-span-2 sm:col-span-2 md:col-span-1">
+            <Link href="/" className="flex items-center gap-2 mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl" aria-hidden="true">🐝</span>
+              <span className="font-heading text-lg sm:text-xl font-semibold text-primary">
                 The Hive
               </span>
             </Link>

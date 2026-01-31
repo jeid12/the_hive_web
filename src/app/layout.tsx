@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter, Cinzel } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -9,10 +10,11 @@ const inter = Inter({
   variable: '--font-body',
 })
 
-const cinzel = Cinzel({
-  subsets: ['latin'],
+// Nature Beauty font by Billy Argel Fonts
+const natureBeauty = localFont({
+  src: '../../public/fonts/NatureBeauty.ttf',
   variable: '--font-heading',
-  weight: ['400', '500', '600', '700'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -70,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${inter.variable} ${natureBeauty.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
