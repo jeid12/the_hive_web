@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Georgia', serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-white antialiased;
+  font-family: var(--font-body);
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary/30 text-primary-light;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(to right, #d4af37, #f0d464) 1;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+  }
+
+  .mask-decoration {
+    position: relative;
+  }
+
+  .mask-decoration::before {
+    content: '🎭';
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.3;
+  }
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.btn-primary::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-primary-dark to-primary opacity-0 transition-opacity duration-300;
+}
+
+.btn-primary:hover::before {
+  @apply opacity-100;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+}
+
+.card-hover:hover {
+  @apply transform -translate-y-1 shadow-lg;
+  box-shadow: 0 10px 40px rgba(245, 158, 11, 0.15);
+}
+
+/* Environment color classes */
+.env-entrance {
+  @apply bg-gradient-to-br from-accent-honey/20 to-accent-honey/5;
+}
+
+.env-depths {
+  @apply bg-gradient-to-br from-accent-dark/20 to-accent-dark/5;
+}
+
+.env-core {
+  @apply bg-gradient-to-br from-accent-amber/20 to-accent-amber/5;
+}
+
+.env-summit {
+  @apply bg-gradient-to-br from-accent-gold/20 to-accent-gold/5;
+}
+
+/* Animation delays */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
