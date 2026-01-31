@@ -1,11 +1,11 @@
-# 🎭 Mask of the King - Official Website
+# 🐝 The Hive - Official Website
 
-The official website for **Mask of the King**, an African kingdom-themed platformer adventure game built with Phaser 3.
+The official website for **The Hive**, an immersive indie adventure game built with Phaser 3.
 
 ## 🌟 Features
 
 - **Modern Stack**: Built with Next.js 14 (App Router), TypeScript, and Tailwind CSS
-- **Dark Theme**: Elegant dark design inspired by African heritage
+- **Dark Theme**: Elegant dark design with honey/amber accents
 - **Responsive**: Fully responsive for desktop and mobile devices
 - **SEO Optimized**: Proper metadata and semantic HTML
 - **Accessible**: High contrast typography and accessible color palette
@@ -13,7 +13,7 @@ The official website for **Mask of the King**, an African kingdom-themed platfor
 
 ## 📁 Project Structure
 
-```
+\`\`\`
 src/
 ├── app/
 │   ├── layout.tsx          # Root layout with Header & Footer
@@ -47,7 +47,7 @@ src/
 │       ├── MediaSection.tsx
 │       ├── CTASection.tsx
 │       └── index.ts        # Home exports
-```
+\`\`\`
 
 ## 🚀 Getting Started
 
@@ -59,28 +59,28 @@ src/
 ### Installation
 
 1. **Clone the repository:**
-   ```bash
+   \`\`\`bash
    git clone https://github.com/IshKevin/the_hive_web.git
    cd the_hive_web
-   ```
+   \`\`\`
 
 2. **Install dependencies:**
-   ```bash
+   \`\`\`bash
    npm install
    # or
    yarn install
    # or
    pnpm install
-   ```
+   \`\`\`
 
 3. **Run the development server:**
-   ```bash
+   \`\`\`bash
    npm run dev
    # or
    yarn dev
    # or
    pnpm dev
-   ```
+   \`\`\`
 
 4. **Open your browser:**
    Navigate to [http://localhost:3000](http://localhost:3000)
@@ -89,46 +89,46 @@ src/
 
 ### Colors
 
-The design uses an African-inspired gold color palette:
+The design uses a honey/amber-inspired color palette:
 
-- **Primary Gold**: `#d4af37`
-- **Primary Light**: `#f0d464`
-- **Primary Dark**: `#b8941f`
-- **Background**: `#0a0a0f`
+- **Primary Amber**: \`#f59e0b\`
+- **Primary Light**: \`#fbbf24\`
+- **Primary Dark**: \`#d97706\`
+- **Background**: \`#0a0a0f\`
 
-### Environment Colors
+### Accent Colors
 
-Each game environment has its own accent color:
+Each game zone has its own accent color:
 
-- **Savannah**: `#e6ccb2` (warm beige)
-- **Swamp**: `#2d6a4f` (deep green)
-- **Forest**: `#52b788` (bright green)
-- **Mountain**: `#a8dadc` (cool blue)
+- **Honey**: \`#fcd34d\` (warm yellow)
+- **Amber**: \`#f59e0b\` (rich amber)
+- **Gold**: \`#eab308\` (bright gold)
+- **Dark**: \`#78350f\` (deep brown)
 
 ### Typography
 
-- **Headings**: Cinzel (serif, for regal feel)
+- **Headings**: Cinzel (serif, for elegant feel)
 - **Body**: Inter (sans-serif, for readability)
 
 ## 📝 Pages
 
 | Page | Route | Description |
 |------|-------|-------------|
-| Home | `/` | Landing page with hero, features, gallery, and CTAs |
-| About | `/about` | Game story, design philosophy, and team info |
-| Gameplay | `/gameplay` | Controls, mechanics, and environment guide |
-| Media | `/media` | Screenshot gallery, videos, and press kit |
-| Contact | `/contact` | Contact form, FAQs, and community links |
+| Home | \`/\` | Landing page with hero, features, gallery, and CTAs |
+| About | \`/about\` | Game story, design philosophy, and team info |
+| Gameplay | \`/gameplay\` | Controls, mechanics, and zone guide |
+| Media | \`/media\` | Screenshot gallery, videos, and press kit |
+| Contact | \`/contact\` | Contact form, FAQs, and community links |
 
 ## 🖼️ Asset Placeholders
 
 The website uses placeholder components for media assets. To add actual game assets:
 
-1. **Screenshots**: Replace `MediaPlaceholder` components with actual `<Image>` components
+1. **Screenshots**: Replace \`MediaPlaceholder\` components with actual \`<Image>\` components
 2. **Videos**: Add video embeds or hosted video files
 3. **Logo**: Create a proper game logo asset
 
-Look for `TODO:` comments in the code for specific asset locations.
+Look for \`TODO:\` comments in the code for specific asset locations.
 
 ## 🚢 Deployment
 
@@ -142,13 +142,13 @@ Look for `TODO:` comments in the code for specific asset locations.
 
 The project can be deployed to any platform that supports Next.js:
 
-```bash
+\`\`\`bash
 # Build for production
 npm run build
 
 # Start production server
 npm run start
-```
+\`\`\`
 
 ## 🛠️ Tech Stack
 
@@ -160,11 +160,11 @@ npm run start
 
 ## 📄 License
 
-This project is created for educational and game jam purposes.
+This project is created for educational purposes.
 
 ## 🙏 Credits
 
-- **Game**: [Mask of the King](https://github.com/IshKevin/the_hive) by Kevin Ishimwe
+- **Game**: [The Hive](https://github.com/IshKevin/the_hive) by Kevin Ishimwe
 - **Framework**: Phaser 3
 - **Website**: Built with Next.js and Tailwind CSS
 
