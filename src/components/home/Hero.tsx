@@ -1,4 +1,5 @@
 import Button from '@/components/ui/Button'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -23,11 +24,16 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32 text-center">
-        {/* Game logo / bee icon */}
+        {/* Game logo */}
         <div className="mb-6 sm:mb-8 animate-fade-in">
-          <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl inline-block animate-float">
-            🐝
-          </span>
+          <Image
+            src="/images/thehive.jpeg"
+            alt="The Hive"
+            width={200}
+            height={200}
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full object-cover mx-auto animate-float shadow-lg shadow-primary/20 border-4 border-primary/30"
+            priority
+          />
         </div>
 
         {/* Title */}

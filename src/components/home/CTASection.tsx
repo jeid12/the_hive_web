@@ -1,5 +1,6 @@
 import { Section } from '@/components/ui'
 import Button from '@/components/ui/Button'
+import Image from 'next/image'
 
 export default function CTASection() {
   return (
@@ -11,9 +12,15 @@ export default function CTASection() {
       </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        {/* Icon */}
-        <div className="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 animate-float">
-          🐝
+        {/* Logo */}
+        <div className="mb-4 sm:mb-6 animate-float">
+          <Image
+            src="/images/thehive.jpeg"
+            alt="The Hive"
+            width={120}
+            height={120}
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover mx-auto shadow-lg shadow-primary/20 border-2 border-primary/30"
+          />
         </div>
 
         {/* Title */}

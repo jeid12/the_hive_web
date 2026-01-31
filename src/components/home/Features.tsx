@@ -2,7 +2,7 @@ import { Section, SectionHeader, FeatureCard } from '@/components/ui'
 
 const features = [
   {
-    icon: '🐝',
+    icon: '🍯',
     title: 'Swarm Mechanics',
     description: 'Experience unique gameplay where cooperation and strategy determine your success in The Hive.',
   },

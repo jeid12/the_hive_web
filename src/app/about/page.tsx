@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { Section, SectionHeader, Card } from '@/components/ui'
 
 export const metadata: Metadata = {
@@ -63,7 +64,13 @@ export default function AboutPage() {
         </div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <span className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 block">🐝</span>
+          <Image
+            src="/images/thehive.jpeg"
+            alt="The Hive"
+            width={120}
+            height={120}
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover mx-auto mb-4 sm:mb-6 shadow-lg shadow-primary/20 border-2 border-primary/30"
+          />
           <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6">
             About <span className="text-gradient">The Hive</span>
           </h1>

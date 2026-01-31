@@ -42,6 +42,7 @@ const config: Config = {
       },
       fontFamily: {
         heading: ['var(--font-heading)', 'Nature Beauty', 'cursive', 'sans-serif'],
+        display: ['var(--font-display)', 'Golden Beach', 'cursive', 'sans-serif'],
         body: ['var(--font-body)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {

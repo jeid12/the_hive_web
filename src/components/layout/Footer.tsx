@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const footerLinks = {
   game: [
@@ -26,7 +27,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3 sm:mb-4">
-              <span className="text-2xl sm:text-3xl" aria-hidden="true">🐝</span>
+              <Image
+                src="/images/thehive.jpeg"
+                alt="The Hive"
+                width={40}
+                height={40}
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
+              />
               <span className="font-heading text-lg sm:text-xl font-semibold text-primary">
                 The Hive
               </span>

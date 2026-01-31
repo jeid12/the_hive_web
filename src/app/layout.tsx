@@ -17,6 +17,13 @@ const natureBeauty = localFont({
   display: 'swap',
 })
 
+// Golden Beach font for display/accent text
+const goldenBeach = localFont({
+  src: '../../public/fonts/GoldenBeach.otf',
+  variable: '--font-display',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://thehive.game'),
   title: {
@@ -72,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${natureBeauty.variable}`}>
+    <html lang="en" className={`${inter.variable} ${natureBeauty.variable} ${goldenBeach.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>

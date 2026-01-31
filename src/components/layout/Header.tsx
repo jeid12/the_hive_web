@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const navLinks = [
@@ -39,7 +40,13 @@ export default function Header() {
             href="/"
             className="flex items-center gap-1.5 sm:gap-2 group"
           >
-            <span className="text-xl sm:text-2xl md:text-3xl" aria-hidden="true">🐝</span>
+            <Image
+              src="/images/thehive.jpeg"
+              alt="The Hive"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full object-cover"
+            />
             <span className="font-heading text-base sm:text-lg md:text-xl font-semibold text-primary group-hover:text-primary-light transition-colors">
               The Hive
             </span>
