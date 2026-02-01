@@ -1,12 +1,13 @@
-import { Section, SectionHeader, MediaPlaceholder } from '@/components/ui'
+import Image from 'next/image'
+import { Section, SectionHeader } from '@/components/ui'
 
 const screenshots = [
-  { label: 'Main Menu', type: 'screenshot' as const },
-  { label: 'The Entrance', type: 'screenshot' as const },
-  { label: 'The Depths', type: 'screenshot' as const },
-  { label: 'The Core', type: 'screenshot' as const },
-  { label: 'The Summit', type: 'screenshot' as const },
-  { label: 'Victory Screen', type: 'screenshot' as const },
+  { src: '/images/Screenshot from 2026-02-01 11-05-02.png', label: 'Gameplay Scene 1' },
+  { src: '/images/Screenshot from 2026-02-01 11-09-17.png', label: 'Gameplay Scene 2' },
+  { src: '/images/Screenshot from 2026-02-01 11-09-30.png', label: 'Gameplay Scene 3' },
+  { src: '/images/Screenshot from 2026-02-01 11-09-40.png', label: 'Gameplay Scene 4' },
+  { src: '/images/Screenshot from 2026-02-01 11-10-01.png', label: 'Gameplay Scene 5' },
+  { src: '/images/Screenshot from 2026-02-01 11-10-43.png', label: 'Gameplay Scene 6' },
 ]
 
 export default function MediaSection() {
@@ -17,14 +18,18 @@ export default function MediaSection() {
         subtitle="Explore the world of The Hive"
       />
 
-      {/* Featured video/gif placeholder */}
+      {/* Featured video */}
       <div className="mb-12">
-        <MediaPlaceholder 
-          type="video" 
-          label="Gameplay Trailer"
-          aspectRatio="wide"
-          className="max-w-4xl mx-auto shadow-2xl shadow-black/50"
-        />
+        <div className="relative aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
+          <video 
+            controls
+            className="w-full h-full object-cover"
+            poster="/images/Screenshot from 2026-02-01 11-05-02.png"
+          >
+            <source src="/images/video of the game.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
       {/* Screenshot grid */}
@@ -32,13 +37,17 @@ export default function MediaSection() {
         {screenshots.map((item, index) => (
           <div 
             key={index}
-            className="animate-scale-in"
+            className="animate-scale-in group"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <MediaPlaceholder 
-              type={item.type}
-              label={item.label}
-            />
+            <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10 group-hover:border-primary/30 transition-all duration-300">
+              <Image 
+                src={item.src}
+                alt={item.label}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
         ))}
       </div>

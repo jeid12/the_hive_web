@@ -9,40 +9,34 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: 'Kevin Ishimwe',
-    role: 'Creator & Lead Developer',
-    bio: 'Creator and lead developer of The Hive. Passionate about crafting immersive gaming experiences that challenge and delight players.',
+    name: "NIYOKWIZERA JEAN D'AMOUR",
+    role: 'Lead Developer',
+    bio: 'Lead developer of The Hive. Drives the technical direction and ensures the game runs flawlessly.',
     avatar: '👨‍💻',
   },
   {
-    name: 'Bro Jeid',
-    role: 'Co-Developer',
-    bio: 'Visionary contributor and core architect of The Hive. Drives the technical direction and ensures exceptional quality.',
-    avatar: '💻',
-  },
-  {
-    name: 'Joshua',
-    role: 'Game Designer',
-    bio: 'Creative mind behind the gameplay mechanics and level design. Crafts engaging challenges that keep players immersed.',
+    name: 'ISHIMWE KEVIN',
+    role: 'Game Developer & Controller',
+    bio: 'Core game developer responsible for gameplay mechanics and controller systems that bring The Hive to life.',
     avatar: '🎮',
   },
   {
-    name: 'Team Member',
-    role: 'Artist',
-    bio: 'Brings The Hive to life with stunning visuals and animations. Creates the vibrant world players explore.',
+    name: 'KAMARA JOSHUA',
+    role: 'Creative Direction & Character Design',
+    bio: 'Creative visionary behind the character designs and overall artistic direction of The Hive.',
     avatar: '🎨',
   },
   {
-    name: 'Team Member',
-    role: 'Sound Designer',
-    bio: 'Crafts the immersive audio landscape of The Hive. From buzzing ambience to epic soundtracks.',
-    avatar: '🎵',
+    name: 'OTABOR EGHAREVBA',
+    role: 'Project Manager, Animator & Background Designer',
+    bio: 'Manages the project while crafting stunning animations and immersive background designs.',
+    avatar: '✨',
   },
   {
-    name: 'Team Member',
-    role: 'QA & Testing',
-    bio: 'Ensures quality and polish in every aspect of the game. Catches bugs before players do.',
-    avatar: '🔍',
+    name: 'DUSHIME ARIANE',
+    role: 'Music Composer & Innovator',
+    bio: 'Creates the captivating musical soundscapes and innovative audio experiences of The Hive.',
+    avatar: '🎵',
   },
 ]
 

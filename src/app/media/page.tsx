@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
-import { Section, SectionHeader, MediaPlaceholder } from '@/components/ui'
+import Image from 'next/image'
+import { Section, SectionHeader } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Media',
@@ -7,34 +8,15 @@ export const metadata: Metadata = {
 }
 
 const screenshots = [
-  { label: 'Main Menu', category: 'UI', description: 'The animated main menu with Start Game and Tutorial options' },
-  { label: 'Tutorial Screen', category: 'UI', description: 'Interactive tutorial with controls explanation and practice area' },
-  { label: 'Game Introduction', category: 'Story', description: 'Welcome to The Hive — your adventure begins' },
-  { label: 'The Entrance', category: 'Environment', description: 'The warm amber glow of the starting zone' },
-  { label: 'The Depths', category: 'Environment', description: 'Navigate through challenging darker areas' },
-  { label: 'The Core', category: 'Environment', description: 'The heart of The Hive with intense challenges' },
-  { label: 'The Summit', category: 'Environment', description: 'Golden heights — the final challenge' },
-  { label: 'Item Collection', category: 'Gameplay', description: 'Collecting key items throughout the game' },
-  { label: 'Enemy Encounter', category: 'Gameplay', description: 'Enemies patrol the environments' },
-  { label: 'Victory Screen', category: 'Story', description: 'Triumph! You conquered The Hive!' },
-  { label: 'End Scene', category: 'Story', description: 'The conclusion of your epic journey' },
-  { label: 'Credits', category: 'UI', description: 'The team behind The Hive' },
+  { src: '/images/Screenshot from 2026-02-01 11-05-02.png', label: 'Gameplay Scene 1', category: 'Gameplay', description: 'Experience the vibrant world of The Hive' },
+  { src: '/images/Screenshot from 2026-02-01 11-09-17.png', label: 'Gameplay Scene 2', category: 'Environment', description: 'Navigate through beautifully crafted environments' },
+  { src: '/images/Screenshot from 2026-02-01 11-09-30.png', label: 'Gameplay Scene 3', category: 'Gameplay', description: 'Challenging gameplay moments await' },
+  { src: '/images/Screenshot from 2026-02-01 11-09-40.png', label: 'Gameplay Scene 4', category: 'Environment', description: 'Explore the depths of The Hive' },
+  { src: '/images/Screenshot from 2026-02-01 11-10-01.png', label: 'Gameplay Scene 5', category: 'Gameplay', description: 'Action-packed adventure sequences' },
+  { src: '/images/Screenshot from 2026-02-01 11-10-43.png', label: 'Gameplay Scene 6', category: 'Environment', description: 'Stunning visual design throughout' },
 ]
 
-const categories = ['All', 'Environment', 'Gameplay', 'Story', 'UI']
-
-const videos = [
-  { label: 'Full Gameplay Walkthrough', duration: '~5 min' },
-  { label: 'Speedrun Attempt', duration: '~2 min' },
-  { label: 'All Environments Tour', duration: '~3 min' },
-]
-
-const gifs = [
-  { label: 'Item Collection Effect' },
-  { label: 'Enemy Movement Patterns' },
-  { label: 'Screen Transitions' },
-  { label: 'Title Animation' },
-]
+const categories = ['All', 'Environment', 'Gameplay']
 
 export default function MediaPage() {
   return (
@@ -65,15 +47,18 @@ export default function MediaPage() {
         />
         
         <div className="max-w-5xl mx-auto">
-          <MediaPlaceholder 
-            type="video" 
-            label="Official Gameplay Trailer"
-            aspectRatio="wide"
-            className="shadow-2xl shadow-black/50"
-          />
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
+            <video 
+              controls
+              className="w-full h-full object-cover"
+              poster="/images/Screenshot from 2026-02-01 11-05-02.png"
+            >
+              <source src="/images/video of the game.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <p className="text-center text-gray-500 text-xs sm:text-sm mt-3 sm:mt-4">
-            {/* TODO: Replace with actual gameplay trailer */}
-            Gameplay trailer coming soon
+            Official gameplay footage from The Hive
           </p>
         </div>
       </Section>
@@ -108,10 +93,14 @@ export default function MediaPage() {
               key={index}
               className="group"
             >
-              <MediaPlaceholder 
-                type="screenshot"
-                label={screenshot.label}
-              />
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10 group-hover:border-primary/30 transition-all duration-300">
+                <Image 
+                  src={screenshot.src}
+                  alt={screenshot.label}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="mt-3">
                 <div className="flex items-center justify-between mb-1">
                   <h3 className="text-white font-medium">{screenshot.label}</h3>
@@ -121,50 +110,6 @@ export default function MediaPage() {
                 </div>
                 <p className="text-gray-500 text-sm">{screenshot.description}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Gameplay Videos Section */}
-      <Section dark>
-        <SectionHeader 
-          title="Gameplay Videos"
-          subtitle="Watch full gameplay sessions"
-        />
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {videos.map((video, index) => (
-            <div key={index}>
-              <MediaPlaceholder 
-                type="video"
-                label={video.label}
-              />
-              <div className="mt-3 flex items-center justify-between">
-                <h3 className="text-white font-medium">{video.label}</h3>
-                <span className="text-gray-500 text-sm">{video.duration}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* GIFs Section */}
-      <Section>
-        <SectionHeader 
-          title="Animated GIFs"
-          subtitle="Quick glimpses of gameplay moments"
-        />
-        
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {gifs.map((gif, index) => (
-            <div key={index}>
-              <MediaPlaceholder 
-                type="gif"
-                label={gif.label}
-                aspectRatio="square"
-              />
-              <p className="mt-2 text-center text-gray-400 text-sm">{gif.label}</p>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
-import { Section, SectionHeader, MediaPlaceholder } from '@/components/ui'
+import Image from 'next/image'
+import { Section, SectionHeader } from '@/components/ui'
 
 export default function GameOverview() {
   return (
@@ -51,12 +52,15 @@ export default function GameOverview() {
         {/* Media */}
         <div className="order-1 lg:order-2">
           <div className="relative">
-            {/* Main screenshot placeholder */}
-            <MediaPlaceholder 
-              type="screenshot" 
-              label="Gameplay Screenshot"
-              className="shadow-2xl shadow-black/50"
-            />
+            {/* Main screenshot */}
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
+              <Image 
+                src="/images/Screenshot from 2026-02-01 11-05-02.png"
+                alt="The Hive Gameplay Screenshot"
+                fill
+                className="object-cover"
+              />
+            </div>
             
             {/* Floating decorative elements - hidden on mobile */}
             <div className="hidden sm:block absolute -top-4 -right-4 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-accent-honey/20 rounded-full blur-xl" />

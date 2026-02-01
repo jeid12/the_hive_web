@@ -1,5 +1,12 @@
 import { Metadata } from 'next'
-import { Section, SectionHeader, Card, MediaPlaceholder } from '@/components/ui'
+import Image from 'next/image'
+import { Section, SectionHeader, Card } from '@/components/ui'
+
+const mechanicImages = [
+  '/images/Screenshot from 2026-02-01 11-09-17.png',
+  '/images/Screenshot from 2026-02-01 11-09-30.png',
+  '/images/Screenshot from 2026-02-01 11-09-40.png',
+]
 
 export const metadata: Metadata = {
   title: 'Gameplay',
@@ -169,10 +176,14 @@ export default function GameplayPage() {
                 </ul>
               </div>
               <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                <MediaPlaceholder 
-                  type="gif" 
-                  label={`${mechanic.title} Demo`}
-                />
+                <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10 group-hover:border-primary/30 transition-all duration-300">
+                  <Image 
+                    src={mechanicImages[index]}
+                    alt={`${mechanic.title} Demo`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           ))}
